@@ -10,15 +10,12 @@
 def list_to_int(number: list) -> int: # input is of type list, and we are returning an int
     
     length = len(number)
-    index = 0 # initialise the index at 0 for a list
     total = 0 # initialise the total before the for loop
 
     for i in range(length): # number = [8, 3, 5, 1]
-        digit = number[index] # otherwise could use i-0
+        digit = number[i] # otherwise could use an index that increases
         # digit = 8
         # print(digit) used to check that we are in fact returning the correct digit
-
-        index += 1
 
         place = 10**(length - i - 1)
         # print(place) used to check that it was to the correct power {saw that we got 4, 3, 2, 1 --> used -1 to generate correct powers}
